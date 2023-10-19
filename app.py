@@ -126,5 +126,5 @@ st.write('---')
 
 result = predict(pd.DataFrame([[option,year,kms_driven,fuel_type]],columns=['name','year','kms_driven','fuel_type']))
 
-st.code(round(result,2))
+st.code(round(result[0],2))
    
