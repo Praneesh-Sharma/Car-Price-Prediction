@@ -5,9 +5,6 @@ import pickle
 
 st.title('Car Price Prediction')
 
-#User input for model parameters
-st.markdown("<h3 style='text-align: left; color: black;'>Model Parameters</h3>", unsafe_allow_html=True)
-
 option = st.selectbox(
    "Car Model",
    ('Audi A3 Cabriolet', 'Audi A4 1.8', 'Audi A4 2.0', 'Audi A6 2.0',
@@ -102,7 +99,7 @@ option = st.selectbox(
    placeholder="Select model...",
 )
 
-st.write('---')
+# st.write('---')
 
 year = st.number_input("Model Year:",
                       min_value=1995,
@@ -110,11 +107,11 @@ year = st.number_input("Model Year:",
                       step=1
       )
 
-st.write('---')
+# st.write('---')
 
 kms_driven = st.number_input("Kilometers driven:")
 
-st.write('---')
+# st.write('---')
 
 fuel_type = st.selectbox("Fuel Type",
                          ("Petrol", "Diesel"),
