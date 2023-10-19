@@ -1,6 +1,7 @@
 #Importing libraries
 import streamlit as st
 import pandas as pd
+import pickle
 # from prediction import predict
 
 st.title('Car Price Prediction')
