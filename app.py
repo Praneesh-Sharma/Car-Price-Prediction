@@ -133,4 +133,5 @@ with open("LinearRegressionModel.pkl", 'rb') as f:
 df = pd.DataFrame([[option,year,kms_driven,fuel_type]],columns=['name','year','kms_driven','fuel_type']
 
 if st.button("Predict"):
-   st.dataframe(df)
+   # st.dataframe(df)
+   st.code(year)
