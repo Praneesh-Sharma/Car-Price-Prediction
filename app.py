@@ -130,7 +130,8 @@ with open("LinearRegressionModel.pkl", 'rb') as f:
 # result = clf.predict(pd.DataFrame([[option,year,kms_driven,fuel_type]],columns=['name','year','kms_driven','fuel_type']))
 # st.code(round(result[0],2))
 
-st.code(option)
-st.code(year)
-st.code(kms_driven)
-st.code(fuel_type)
+is st.button("Predict"):
+   st.code(option)
+   st.code(year)
+   st.code(kms_driven)
+   st.code(fuel_type)
