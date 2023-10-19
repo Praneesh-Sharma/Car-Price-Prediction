@@ -1,7 +1,7 @@
 #Importing libraries
 import streamlit as st
 import pandas as pd
-from prediction import predict
+# from prediction import predict
 
 st.title('Car Price Prediction')
 
@@ -124,7 +124,13 @@ fuel_type = st.selectbox("Fuel Type",
 
 st.write('---')
 
-result = predict(pd.DataFrame([[option,year,kms_driven,fuel_type]],columns=['name','year','kms_driven','fuel_type']))
+# result = predict(pd.DataFrame([[option,year,kms_driven,fuel_type]],columns=['name','year','kms_driven','fuel_type']))
+
+with open("LinearRegressionModel.pkl", 'rb') as f:
+   clf = pickle.load(f)
+
+result = clf.predict(pd.DataFrame([[option,year,kms_driven,fuel_type]],columns=['name','year','kms_driven','fuel_type']))
+   
 
 st.code(round(result[0],2))
    
